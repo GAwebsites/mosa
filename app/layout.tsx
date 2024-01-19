@@ -40,12 +40,10 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${source_Sans_3.variable}`}
     >
-      <body className="flex flex-col items-center justify-center">
-        <div className="container flex flex-col items-center justify-center">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+      <body className="min-h-screen max-w-screen flex flex-col items-center justify-center ">
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );

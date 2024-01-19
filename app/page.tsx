@@ -4,6 +4,8 @@ import Image from "next/image";
 import { url } from "inspector";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { Counter } from "./components/animations/counter";
+import ServiceCard from "./components/home/serviceCard";
+import ProjectCard from "./components/projects/projectCard";
 
 export default function Home() {
   const ref = useRef(null);
@@ -19,9 +21,9 @@ export default function Home() {
 
   return (
     <main className="h-full w-full flex flex-col">
-      <section id="hero" className="h-full w-full font-montserrat mb-32">
+      <section id="hero" className="h-full min-h-screen w-full font-montserrat">
         <div className=" w-full h-full flex flex-col items-center justify-center">
-          <div className=" text-white font-montserrat bg-hero w-screen bg-no-repeat bg-cover shadow-2xl">
+          <div className=" text-white font-montserrat bg-hero w-full bg-no-repeat bg-cover shadow-2xl">
             <div className="pt-48 pb-80 px-6 w-full h-full backdrop-blur-[2px] backdrop-brightness-75 flex flex-col items-center justify-center">
               <h1 className="text-2xl text-center pb-8 font-inter">
                 Here at MOSA <br /> We build lasting memories
@@ -42,48 +44,33 @@ export default function Home() {
             animate="visible"
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="w-1/3 h-[220px] flex flex-col items-center justify-center text-center bg-grey rounded-xl px-12 shadow-2xl">
-              <h1>Bouwwerken</h1>
-              <p>
-                Sinds 2009 heeft Mosa Bv met succes prachtige villaprojecten en
-                hoogwaardige appartementen gerealiseerd. Als uw betrouwbare
-                bouwpartner delen we graag onze jarenlange ervaring, visie en
-                vakmanschap met u.
-              </p>
-            </div>
-            <div className="w-1/3 h-[220px] flex flex-col items-center justify-center text-center bg-grey rounded-xl px-12 shadow-2xl">
-              <h1>Bouwwerken</h1>
-              <p>
-                Sinds 2009 heeft Mosa Bv met succes prachtige villaprojecten en
-                hoogwaardige appartementen gerealiseerd. Als uw betrouwbare
-                bouwpartner delen we graag onze jarenlange ervaring, visie en
-                vakmanschap met u.
-              </p>
-            </div>
-            <div className="w-1/3 h-[220px] flex flex-col items-center justify-center text-center bg-grey rounded-xl px-12 shadow-2xl">
-              <h1>Bouwwerken</h1>
-              <p>
-                Sinds 2009 heeft Mosa Bv met succes prachtige villaprojecten en
-                hoogwaardige appartementen gerealiseerd. Als uw betrouwbare
-                bouwpartner delen we graag onze jarenlange ervaring, visie en
-                vakmanschap met u.
-              </p>
-            </div>
+            <ServiceCard
+              title="Bouw"
+              content="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsut amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+            />
+            <ServiceCard
+              title="Bouw"
+              content="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsut amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+            />
+            <ServiceCard
+              title="Bouw"
+              content="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsut amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet"
+            />
           </motion.div>
         </div>
       </section>
       <section
         ref={ref}
         id="about"
-        className="h-[500px] flex flex-col gap-20 mb-64"
+        className=" flex flex-col gap-20 py-12 min-h-screen"
       >
         <div className="flex flex-col items-center justify-center">
           <p className="text-accent ">Mosa als partner</p>
           <h1 className="text-xl">Ontdek onze kwaliteiten</h1>
         </div>
-        <div className="flex items-center justify-around h-full font-source">
+        <div className="flex items-center h-full font-source">
           <div className="hidden md:flex bg-about rounded-xl w-full h-full bg-cover shadow-2xl min-h-[425px]"></div>
-          <div className="grid grid-cols-2 gap-6 h-full py-5 pl-16">
+          <div className="grid grid-cols-2 gap-6 min-h-[425px] pl-16 py-8">
             <div className="col-span-2 md:text-left text-center">
               <p>
                 Mosa BV excelleert in exclusieve villabouw, appartementen en
@@ -169,56 +156,19 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section id="projects" className=" flex flex-col gap-20 mb-32">
+      <section
+        id="projects"
+        className=" flex flex-col gap-20 mb-32 min-h-screen"
+      >
         <div className="flex flex-col items-center justify-center">
           <p className="text-accent ">Mosa als partner</p>
           <h1 className="text-xl">Ontdek onze kwaliteiten</h1>
         </div>
-        <div className="w-full flex items-center justify-around">
-          <article className="bg-hero object-cover h-[450px] w-[350px] hover:cursor-pointer">
-            <a href="">
-              <div className="text-white font-semibold font-montserrat flex flex-col items-center justify-center w-full h-full uppercase hover:backdrop-blur-[2px] hover:backdrop-brightness-75 transition-all duration-700 ease-in-out relative opacity-0 hover:opacity-100">
-                <p className="block text-xl">moderne villa</p>
-                <div className="w-full flex items-center justify-around absolute bottom-5">
-                  <div className="border-2 py-1 px-3 rounded-full">tags</div>
-                  <div className="border-2 py-1 px-3 rounded-full">tags</div>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article className="bg-hero object-cover h-[450px] w-[350px] hover:cursor-pointer">
-            <a href="">
-              <div className="text-white font-semibold font-montserrat flex flex-col items-center justify-center w-full h-full uppercase hover:backdrop-blur-[2px] hover:backdrop-brightness-75 transition-all duration-700 ease-in-out relative opacity-0 hover:opacity-100">
-                <p className="block text-xl">moderne villa</p>
-                <div className="w-full flex items-center justify-around absolute bottom-5">
-                  <div className="border-2 py-1 px-3 rounded-full">tags</div>
-                  <div className="border-2 py-1 px-3 rounded-full">tags</div>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article className="bg-hero object-cover h-[450px] w-[350px] hover:cursor-pointer">
-            <a href="">
-              <div className="text-white font-semibold font-montserrat flex flex-col items-center justify-center w-full h-full uppercase hover:backdrop-blur-[2px] hover:backdrop-brightness-75 transition-all duration-700 ease-in-out relative opacity-0 hover:opacity-100">
-                <p className="block text-xl">moderne villa</p>
-                <div className="w-full flex items-center justify-around absolute bottom-5">
-                  <div className="border-2 py-1 px-3 rounded-full">tags</div>
-                  <div className="border-2 py-1 px-3 rounded-full">tags</div>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article className="bg-hero object-cover h-[450px] w-[350px] hover:cursor-pointer">
-            <a href="">
-              <div className="text-white font-semibold font-montserrat flex flex-col items-center justify-center w-full h-full uppercase hover:backdrop-blur-[2px] hover:backdrop-brightness-75 transition-all duration-700 ease-in-out relative opacity-0 hover:opacity-100">
-                <p className="block text-xl">moderne villa</p>
-                <div className="w-full flex items-center justify-around absolute bottom-5">
-                  <div className="border-2 py-1 px-3 rounded-full">tags</div>
-                  <div className="border-2 py-1 px-3 rounded-full">tags</div>
-                </div>
-              </div>
-            </a>
-          </article>
+        <div className="w-full flex-col md:flex-row flex items-center justify-around">
+          <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
+          <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
+          <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
+          <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
         </div>
         <div className="w-full flex items-end justify-end font-montserrat">
           <a href="">
