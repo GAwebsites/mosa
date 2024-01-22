@@ -25,7 +25,7 @@ export default function Home() {
         <div className=" w-full h-full flex flex-col items-center justify-center">
           <div className=" text-white font-montserrat bg-hero w-full bg-no-repeat bg-cover shadow-2xl">
             <div className="pt-48 pb-80 px-6 w-full h-full backdrop-blur-[2px] backdrop-brightness-75 flex flex-col items-center justify-center">
-              <h1 className="text-2xl text-center pb-8 font-inter">
+              <h1 className="text-2xl text-center pb-8 font-montserrat">
                 Here at MOSA <br /> We build lasting memories
               </h1>
               <p className="text-center">
@@ -108,7 +108,7 @@ export default function Home() {
                 animate={mainControls}
                 transition={{ duration: 1, delay: 0.5 }}
               >
-                <div className="text-accent text-5xl font-medium font-montserrat h-12 flex flex">
+                <div className="text-accent text-5xl font-medium font-montserrat h-12 flex ">
                   {isInView ? <Counter from={0} to={100} /> : null}+
                 </div>
               </motion.div>
@@ -124,7 +124,7 @@ export default function Home() {
                 animate={mainControls}
                 transition={{ duration: 1, delay: 0.5 }}
               >
-                <div className="text-accent text-5xl font-medium font-montserrat h-12 flex flex">
+                <div className="text-accent text-5xl font-medium font-montserrat h-12 flex ">
                   {isInView ? <Counter from={0} to={6} /> : null}
                 </div>
               </motion.div>
@@ -140,7 +140,7 @@ export default function Home() {
                 animate={mainControls}
                 transition={{ duration: 1, delay: 0.5 }}
               >
-                <div className="text-accent text-5xl font-medium font-montserrat h-12 flex flex">
+                <div className="text-accent text-5xl font-medium font-montserrat h-12 flex ">
                   {isInView ? <Counter from={0} to={80} /> : null}+
                 </div>
               </motion.div>

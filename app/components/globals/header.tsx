@@ -3,7 +3,7 @@ export default function Header() {
     <section className="h-20 w-full max-w-screen bg-grey text-white flex items-center justify-center">
       <div className="flex items-center justify-between w-4/5">
         <div>MOSA</div>
-        <div className="hidden md:visible">
+        <div className="hidden md:flex">
           <ul className="flex items-center justify-evenly gap-20">
             <li className="hover:text-accent hover:cursor-pointer transition-all duration-300 ease-in-out">
               Diensten
@@ -14,7 +14,7 @@ export default function Header() {
             <li>Blog</li>
           </ul>
         </div>
-        <div className="hidden md:visible">
+        <div className="hidden md:flex">
           <button className="px-8 py-3 bg-accent rounded-xl font-semibold hover:scale-105 transition-all duration-300 ease-in-out">
             Contacteer ons
           </button>

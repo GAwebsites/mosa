@@ -1,11 +1,35 @@
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
 interface ProjectCardProps {
   title: string;
   tags: string[];
 }
 
 export default function ProjectCard({ title, tags }: ProjectCardProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
-    <article className="bg-hero object-cover h-[450px] w-[350px] hover:cursor-pointer">
+    <motion.article
+      ref={ref}
+      className="bg-hero object-cover h-[450px] w-[350px] hover:cursor-pointer"
+      variants={{
+        hidden: { opacity: 0, y: 25, scale: 0.8 },
+        visible: { opacity: 1, y: 0, scale: 1 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.5, delay: 0.25 }}
+    >
       <a href="">
         <div className="text-white font-semibold font-montserrat flex flex-col items-center justify-center w-full h-full uppercase hover:backdrop-blur-[2px] hover:backdrop-brightness-75 transition-all duration-700 ease-in-out relative opacity-0 hover:opacity-100">
           <p className="block text-xl">{title}</p>
@@ -23,6 +47,6 @@ export default function ProjectCard({ title, tags }: ProjectCardProps) {
           </div>
         </div>
       </a>
-    </article>
+    </motion.article>
   );
 }
