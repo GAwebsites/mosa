@@ -24,10 +24,10 @@ const config: Config = {
         about: "url('/static/assets/images/about.jpg')",
       },
       colors: {
-        white: "#ffffff",
+        white: "#F5f5f5",
         black: "#141414",
-        grey: "#232323",
-        accent: "#D9AA5E",
+        grey: "#252525",
+        accent: "#df5f44",
       },
       fontSize: {
         xs: "12px",

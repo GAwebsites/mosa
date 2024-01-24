@@ -6,7 +6,7 @@ import ProjectCard from "../components/projects/projectCard";
 
 export default function Projects() {
   return (
-    <main className="min-h-screen w-full flex flex-col md:px-52 py-24 container max-w-sm md:max-w-full">
+    <main className="min-h-screen w-full flex flex-col md:px-52 py-24 md:w-2/3">
       <section className="w-full flex flex-col">
         <h1 className="text-4xl font-semibold text-grey">Onze projecten</h1>
         <div className="text-grey text-md w-full flex flex-row items-start justify-between pt-20">
@@ -23,30 +23,18 @@ export default function Projects() {
         </div>
       </section>
       <section className="w-full grid-cols-1 grid md:grid-cols-4 place-items-center gap-7 pt-14">
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-        <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
+        <ProjectCard slug="villa" />
+        <ProjectCard slug="renovatie" />
+        <ProjectCard slug="appartement" />
+        <ProjectCard slug="villa" />
+        <ProjectCard slug="villa" />
+        <ProjectCard slug="renovatie" />
+        <ProjectCard slug="appartement" />
+        <ProjectCard slug="villa" />
+        <ProjectCard slug="villa" />
+        <ProjectCard slug="renovatie" />
+        <ProjectCard slug="appartement" />
+        <ProjectCard slug="villa" />
       </section>
     </main>
   );

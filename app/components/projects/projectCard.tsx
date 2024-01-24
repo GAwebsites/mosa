@@ -1,12 +1,19 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import projects from "../../data/projects.json";
 
-interface ProjectCardProps {
+interface CardProps {
+  slug: string;
+}
+
+interface ProjectProps {
   title: string;
   tags: string[];
 }
 
-export default function ProjectCard({ title, tags }: ProjectCardProps) {
+export default function ProjectCard({ slug }: CardProps) {
+  const projectData: ProjectProps = (projects as any)[slug];
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
@@ -30,11 +37,11 @@ export default function ProjectCard({ title, tags }: ProjectCardProps) {
       animate={mainControls}
       transition={{ duration: 0.5, delay: 0.25 }}
     >
-      <a href="">
+      <a href={`projects/${slug}`}>
         <div className="text-white font-semibold font-montserrat flex flex-col items-center justify-center w-full h-full uppercase hover:backdrop-blur-[2px] hover:backdrop-brightness-75 transition-all duration-700 ease-in-out relative opacity-0 hover:opacity-100">
-          <p className="block text-xl">{title}</p>
+          <p className="block text-xl">{projectData.title}</p>
           <div className="w-full flex items-center justify-around absolute bottom-5">
-            {tags.map((tag, index) => {
+            {projectData.tags.map((tag, index) => {
               return (
                 <div
                   key={index}

@@ -6,14 +6,6 @@ import { Montserrat, Source_Sans_3 } from "next/font/google";
 import Header from "./components/globals/header";
 import Footer from "./components/globals/footer";
 
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
@@ -40,7 +32,10 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${source_Sans_3.variable}`}
     >
-      <body className="min-h-screen max-w-screen flex flex-col items-center justify-center ">
+      <head>
+        <link rel="icon" href="/icon.svg" sizes="any" />
+      </head>
+      <body className="min-h-screen max-w-screen flex flex-col items-center justify-center container mx-auto bg-white">
         <Header />
         {children}
         <Footer />

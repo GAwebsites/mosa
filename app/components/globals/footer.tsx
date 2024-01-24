@@ -2,7 +2,7 @@ import { MdLocationPin, MdCall, MdEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <section className="h-80 w-full  bg-grey text-white flex flex-col items-center justify-center gap-10 ">
+    <section className="h-80 w-screen  bg-grey text-white flex flex-col items-center justify-center gap-10 ">
       <div className="flex w-4/5  items-center justify-between">
         <div className="flex flex-col gap-7">
           LOGO

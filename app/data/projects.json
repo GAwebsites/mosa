@@ -1,9 +1,30 @@
-[
-    {
-        "title": "Modern Villa",
-        "tags": [
-            "nieuwbouw",
-            "villa"
-        ]
+{
+    "villa": {
+        "title": "Moderne Villa",
+        "description": "Moderne villa gelegen op[ de stadsrand van Brugge.",
+        "beforeImages": ["before1.jpg", "before2.jpg", "before3.jpg", "before4.jpg", "before5.jpg"],
+        "afterImages": ["after1.jpg", "after2.jpg", "after3.jpg", "after4.jpg", "after5.jpg"],
+        "coverImage" : "OasisMockup.png",
+        "tags": ["Express", "React", "MongoDB", "Typescript"],
+        "year": "2021"
+
+    },
+    "appartement": {
+        "title": "Appartement",
+        "description": "A real estate react webapp.",
+        "beforeImages": ["before1.jpg", "before2.jpg", "before3.jpg", "before4.jpg", "before5.jpg"],
+        "afterImages": ["after1.jpg", "after2.jpg", "after3.jpg", "after4.jpg", "after5.jpg"],
+        "coverImage" : "OasisMockup.png",
+        "tags": ["Express", "React", "MongoDB", "Typescript"],
+        "year": "2022"
+    },
+    "renovatie": {
+        "title": "Renovatie",
+        "description": "A real estate react webapp.",
+        "beforeImages": ["before1.jpg", "before2.jpg", "before3.jpg", "before4.jpg", "before5.jpg"],
+        "afterImages": ["after1.jpg", "after2.jpg", "after3.jpg", "after4.jpg", "after5.jpg"],
+        "coverImage" : "OasisMockup.png",
+        "tags": ["Express", "React", "MongoDB", "Typescript"],
+        "year": "2023"
     }
-]
+}

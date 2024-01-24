@@ -1,7 +1,6 @@
 "use client";
 import React, { use, useEffect, useRef } from "react";
-import Image from "next/image";
-import { url } from "inspector";
+
 import { motion, useInView, useAnimation } from "framer-motion";
 import { Counter } from "./components/animations/counter";
 import ServiceCard from "./components/home/serviceCard";
@@ -20,10 +19,13 @@ export default function Home() {
   }, [isInView]);
 
   return (
-    <main className="h-full w-full flex flex-col">
-      <section id="hero" className="h-full min-h-screen w-full font-montserrat">
-        <div className=" w-full h-full flex flex-col items-center justify-center">
-          <div className=" text-white font-montserrat bg-hero w-full bg-no-repeat bg-cover shadow-2xl">
+    <main className="h-full w-screen flex flex-col gap-44">
+      <section
+        id="hero"
+        className="h-full min-h-screen w-full font-montserrat "
+      >
+        <div className=" w-full h-full flex flex-col items-center justify-center ">
+          <div className=" text-white font-montserrat bg-hero w-screen bg-no-repeat bg-cover shadow-2xl">
             <div className="pt-48 pb-80 px-6 w-full h-full backdrop-blur-[2px] backdrop-brightness-75 flex flex-col items-center justify-center">
               <h1 className="text-2xl text-center pb-8 font-montserrat">
                 Here at MOSA <br /> We build lasting memories
@@ -62,16 +64,16 @@ export default function Home() {
       <section
         ref={ref}
         id="about"
-        className=" flex flex-col gap-20 py-12 min-h-screen"
+        className=" flex flex-col gap-20 w-3/4  md:w-2/3 mx-auto"
       >
         <div className="flex flex-col items-center justify-center">
           <p className="text-accent ">Mosa als partner</p>
           <h1 className="text-xl">Ontdek onze kwaliteiten</h1>
         </div>
         <div className="flex items-center h-full font-source">
-          <div className="hidden md:flex bg-about rounded-xl w-full h-full bg-cover shadow-2xl min-h-[425px]"></div>
-          <div className="grid grid-cols-2 gap-6 min-h-[425px] pl-16 py-8">
-            <div className="col-span-2 md:text-left text-center">
+          <div className="hidden md:flex bg-about rounded-xl h-full w-1/2 bg-cover shadow-xl min-h-[600px]"></div>
+          <div className="grid grid-cols-2 gap-10 md:gap-6 min-h-[425px] md:pl-16 py-8 w-full md:w-1/2">
+            <div className="col-span-2 md:text-left text-center ">
               <p>
                 Mosa BV excelleert in exclusieve villabouw, appartementen en
                 renovaties. Met perfectie, passie en grondige kennis zorgen we
@@ -158,17 +160,17 @@ export default function Home() {
       </section>
       <section
         id="projects"
-        className=" flex flex-col gap-20 mb-32 min-h-screen"
+        className=" flex flex-col gap-20 min-h-screen w-2/3 mx-auto"
       >
         <div className="flex flex-col items-center justify-center">
-          <p className="text-accent ">Mosa als partner</p>
-          <h1 className="text-xl">Ontdek onze kwaliteiten</h1>
+          <p className="text-accent ">Mosa projecten</p>
+          <h1 className="text-xl">Ons meest recente werk</h1>
         </div>
-        <div className="w-full flex-col md:flex-row flex items-center justify-around">
-          <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-          <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-          <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
-          <ProjectCard title="moderne villa" tags={["peepo", "tags"]} />
+        <div className="flex-col md:flex-row flex items-center justify-center gap-5">
+          <ProjectCard slug="villa" />
+          <ProjectCard slug="renovatie" />
+          <ProjectCard slug="appartement" />
+          <ProjectCard slug="villa" />
         </div>
         <div className="w-full flex items-end justify-end font-montserrat">
           <a href="">
