@@ -32,9 +32,6 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${source_Sans_3.variable}`}
     >
-      <head>
-        <link rel="icon" href="/icon.svg" sizes="any" />
-      </head>
       <body className="min-h-screen max-w-screen flex flex-col items-center justify-center container mx-auto bg-white">
         <Header />
         {children}

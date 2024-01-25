@@ -5,7 +5,7 @@
         "beforeImages": ["before1.jpg", "before2.jpg", "before3.jpg", "before4.jpg", "before5.jpg"],
         "afterImages": ["after1.jpg", "after2.jpg", "after3.jpg", "after4.jpg", "after5.jpg"],
         "coverImage" : "OasisMockup.png",
-        "tags": ["Express", "React", "MongoDB", "Typescript"],
+        "tags": ["nieuwbouw", "project"],
         "year": "2021"
 
     },
@@ -15,7 +15,7 @@
         "beforeImages": ["before1.jpg", "before2.jpg", "before3.jpg", "before4.jpg", "before5.jpg"],
         "afterImages": ["after1.jpg", "after2.jpg", "after3.jpg", "after4.jpg", "after5.jpg"],
         "coverImage" : "OasisMockup.png",
-        "tags": ["Express", "React", "MongoDB", "Typescript"],
+        "tags": ["renovatie", "dakwerk"],
         "year": "2022"
     },
     "renovatie": {
@@ -24,7 +24,7 @@
         "beforeImages": ["before1.jpg", "before2.jpg", "before3.jpg", "before4.jpg", "before5.jpg"],
         "afterImages": ["after1.jpg", "after2.jpg", "after3.jpg", "after4.jpg", "after5.jpg"],
         "coverImage" : "OasisMockup.png",
-        "tags": ["Express", "React", "MongoDB", "Typescript"],
+        "tags": ["renovatie"],
         "year": "2023"
     }
 }

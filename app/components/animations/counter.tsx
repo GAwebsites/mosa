@@ -13,7 +13,7 @@ export function Counter({ from, to }: Props) {
     const node = nodeRef.current;
 
     const controls = animate(from, to, {
-      duration: 1.5,
+      duration: 2.5,
       onUpdate(value) {
         node ? (node.textContent = value.toFixed(0)) : null;
       },

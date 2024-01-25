@@ -12,8 +12,8 @@ import TeamCard from "../components/team/teamCard";
 
 export default function Projects() {
   return (
-    <main className="min-h-screen w-full flex flex-col md:px-52 py-24 max-w-sm md:max-w-full font-source">
-      <section className="w-full h-full flex flex-row items-start justify-center -space-x-48">
+    <main className="min-h-screen w-screen flex flex-col gap-52 py-24 max-w-sm md:max-w-full font-source">
+      <section className=" h-full flex flex-row items-start justify-center -space-x-48 ">
         <div className="w-1/2">
           <motion.div className="w-[400px] h-[550px] bg-red-950 shadow-xl relative">
             <motion.div className="w-full h-full  bg-accent left-10 top-10 shadow-xl absolute -z-50"></motion.div>
@@ -54,7 +54,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center justify-center mt-44 ">
+      <section className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <p className="text-accent font-light text-lg">
             Mensen om op te bouwen
@@ -62,7 +62,7 @@ export default function Projects() {
           <h1 className="text-2xl font-medium">Ontmoet het team achter Mosa</h1>
         </div>
 
-        <div className="w-full grid grid-cols-4">
+        <div className="w-full grid grid-cols-4 pt-24">
           <TeamCard name="Ozgur" title="Founder and CEO" />
         </div>
       </section>

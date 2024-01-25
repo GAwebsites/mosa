@@ -6,8 +6,8 @@ import ProjectCard from "../components/projects/projectCard";
 
 export default function Projects() {
   return (
-    <main className="min-h-screen w-full flex flex-col md:px-52 py-24 md:w-2/3">
-      <section className="w-full flex flex-col">
+    <main className="min-h-screen w-screen flex flex-col py-24 mx-auto">
+      <section className="flex flex-col w-2/3 md:px-32">
         <h1 className="text-4xl font-semibold text-grey">Onze projecten</h1>
         <div className="text-grey text-md w-full flex flex-row items-start justify-between pt-20">
           <div className="flex flex-row items-center gap-5 max-w-[50%] flex-wrap">
@@ -22,7 +22,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
-      <section className="w-full grid-cols-1 grid md:grid-cols-4 place-items-center gap-7 pt-14">
+      <section className=" grid-cols-1 grid md:grid-cols-4 place-items-center gap-7 pt-14 w-2/3 md:px-32">
         <ProjectCard slug="villa" />
         <ProjectCard slug="renovatie" />
         <ProjectCard slug="appartement" />
